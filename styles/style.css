@@ -39,16 +39,61 @@ header{
     font-size: 15px;
 }
 #hero{
-    background-image: url('../images/hero.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: grid;
-    grid-template-rows: 30vh 15vh;
+
+    background: linear-gradient(to bottom, #D52B1E, #420202);
+
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    color: #ccc;
+    & #heromensage{
+        
+    display: flex;
+    flex-direction: column;
+        margin: 20px;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        & #title{
+            font-size: 7rem;
+            margin-bottom: 0;
+        }
+    }
+    .CTA{
+        width: auto;
+        padding: 15px 40px ;
+    }
 }
-#hero a{
-    grid-row: 2;
-    margin: auto 18vw ;
+#precobox{
+    font-size: 15px;
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+}
+#preco{
+    font-size: 40px;
+    font-weight: bolder;
+}
+#GBbox{
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+}
+#GB{
+    
+}
+#heromensage span{
+    font-style: italic;
+}
+#spreco{
+    font-size: 80px;
+    font-weight: bolder;
 }
 #cobertura-box{
     width: 70%;
@@ -92,10 +137,14 @@ input:focus{
 #about{
     width: 70%;
     margin: auto;
+    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 100px;
+    & h2{
+        margin-top: 40px;
+    }
 }
 #planos{
     width: 70%;
@@ -113,14 +162,105 @@ input:focus{
     justify-content: space-between;
 
 }
-#planogrid img{
-    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.986) ;
-    border-radius: 20px;
-    transition: transform 0.5s ease;
+.container { 
+    background-color: #f3f3f3;
+    border-radius: 8px; 
+    width: 300px; 
+    margin: 20px auto; 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    justify-content: space-around; 
+    & p{
+        padding: 5px 20px;
+        font-size: 14px;
+    }
+    & ul{
+        display: flex;
+        margin: 0 20px ;
+    }
 }
-#planogrid img:hover, #sugestao img:hover:not( #textbox img){
-    transform: scale(1.1);
-    cursor: pointer;
+.header { 
+    color: #e60000; 
+    
+    padding: 20px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+}
+.price { 
+    margin-top: 20px;
+    
+    padding: 20px; 
+    font-size: 32px; 
+    font-weight: bold; 
+    text-align: center; 
+    margin: 10px 0; }
+.details { 
+    list-style: none; 
+    
+    padding: 20px; 
+    padding: 0; 
+}
+.details li { 
+    margin: 10px 0px; 
+    padding-left: 5px;
+    & img{
+        border-radius: 40px;
+    } 
+}
+.button { 
+    display: block; 
+    text-align: center; 
+    padding: 15px; 
+    border-radius: 20px; 
+    color: #fff; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    margin: 10px 0; 
+    text-decoration: none; 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 20px; 
+}
+.button.orange { 
+    background-color:#a31006 
+}
+.button.orange:hover{
+    opacity: 70%;
+    scale: 1.01;
+}
+.button.grey { 
+    background-color: #ccc; 
+    color: #000;
+}
+details{
+    font-style: italic;
+    padding: 20px; 
+    font-size: 14px;
+
+    & summary {
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 18px;
+    }
+    & li{
+        margin: 5px;
+        color: rgb(97, 95, 95);
+    }
+}
+.more-info { 
+    text-align: center; 
+    height: 50px;
+    align-items: center;
+    display: flex;
+    justify-content: center;;
+    background-color: gainsboro;
+    
+    padding: 20px; 
+    & a {
+        text-decoration: none;
+        color: #000;
+    }   
+
 }
 
 #sugestao{
@@ -263,7 +403,7 @@ footer span{
   
   
   .carousel-nav {
-    position: absolute;
+    margin: auto;
     text-align: center;
     padding: 0 4px;
     border-radius: 70%;
@@ -274,8 +414,7 @@ footer span{
   }
   
   .carousel-nav-left {
-    left: 46vw;
-    top: 2550px;
+    margin-left: 36vw;
     width: 50px;
     height: 50px;
     background-color:   var(--vemelho);
@@ -285,8 +424,7 @@ footer span{
   }
   
   .carousel-nav-right {
-    right: 46vw;
-    top: 2550px;
+    margin-left: 10px;
     width: 50px;
     height: 50px;
     background-color:   var(--vemelho);
@@ -295,9 +433,6 @@ footer span{
     border-radius: 5px;
   }
   .grid{
-    display: none;
-  }
-  #heromensage{
     display: none;
   }
   @media (max-width: 70rem) {
@@ -316,50 +451,7 @@ footer span{
     header .CTA{
         display: none;
     }
-    #hero{
-        background-image: none;
-        background-color: #a31006;
-        width: 100vw;
-        height: 45vh;
-        display: flex;
-        flex-direction: column;
-    }
-    #heromensage{
-        display: flex;
-        flex-direction: column;
-        color: white;
-        margin: 20px;
-        font-size: 25px;
-        text-align: center;
-        gap: 15px;
-    }
-    #precobox{
-        font-size: 15px;
-        gap: 2px;
-        display: flex;
-        flex-direction: column;
-    }
-    #preco{
-        font-size: 40px;
-        font-weight: bolder;
-    }
-    #GBbox{
-        font-size: 15px;
-
-        display: flex;
-        flex-direction: column;
-    }
-    #GBbox span{
-        font-style: italic;
-        font-weight: bolder;
-    }
-    #GB{
-        font-size: 40px;
-        
-    }
-    #heromensage span{
-        font-style: italic;
-    }
+    
     #hero a{
         display: flex;
         padding: 15px;
