@@ -14,3 +14,12 @@ $(document).ready(function(){
     });
   });
   
+  function redirectToWhatsApp() {
+    const cep = document.getElementById('cep').value;
+    const encodedMessage = encodeURIComponent(`Olá, gostaria de consultar a disponibilidade para o meu CEP: ${cep}`);
+    const whatsappLink = `https://wa.me/558189289155?text=${encodedMessage}`;
+
+    window.open(whatsappLink, '_blank'); // abre em nova aba
+    return false; // impede o envio convencional do formulário
+}
+  
