@@ -85,9 +85,6 @@ header{
     display: flex;
     flex-direction: column;
 }
-#GB{
-    
-}
 #heromensage span{
     font-style: italic;
 }
