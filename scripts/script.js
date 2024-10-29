@@ -19,6 +19,7 @@ $(document).ready(function(){
 
     if (!cep) { // Verifica se o campo está vazio
         alert("Por favor, insira o seu CEP."); // Exibe uma mensagem de aviso
+        console.log("erro")
         return false; // Impede o envio e permanece na mesma página
     }
 
