@@ -13,13 +13,18 @@ $(document).ready(function(){
       
     });
   });
+function redirectToWhatsApp() {
+    const cep = document.getElementById('cep').value.trim();
 
-  function redirectToWhatsApp() {
-    const cep = document.getElementById('cep').value.trim(); // Remove espaços extras
+    // Validação para checar se o campo está vazio ou se o CEP é inválido
+    const cepPattern = /^[0-9]{8}$/; // Regex para validar 8 dígitos numéricos
 
-    if (!cep) { // Verifica se o campo está vazio
-        alert("Por favor, insira o seu CEP."); // Exibe uma mensagem de aviso
-        return false; // Impede o envio e permanece na mesma página
+    if (!cep) {
+        alert("Por favor, insira o seu CEP.");
+        return false;
+    } else if (!cepPattern.test(cep)) {
+        alert("Por favor, insira um CEP válido com 8 dígitos.");
+        return false;
     }
 
     const encodedMessage = encodeURIComponent(`Olá, gostaria de consultar a disponibilidade para o meu CEP: ${cep}`);
@@ -28,4 +33,3 @@ $(document).ready(function(){
     window.open(whatsappLink, '_blank'); // Abre em uma nova aba
     return false; // Impede o envio convencional do formulário
 }
-  
