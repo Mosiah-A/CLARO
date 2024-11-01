@@ -342,6 +342,27 @@ footer span{
 }
 
 
+
+#planos-carrossel{
+    margin-bottom: 100px;
+    width: 80%;
+    margin:  100px auto;
+    margin-bottom: 200px;
+    
+    & .box{
+        border: none;
+        box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+
+    }
+    & img{
+        height: 500px;
+        margin: 20px;
+
+    }
+}
 .carousel-root {
     position: relative;
   }
@@ -534,6 +555,17 @@ footer span{
     }
     #obs{
         width: 90%;
+    }
+    
+
+    #planos-carrossel{
+        
+        
+        & img{
+            height: 300px;
+            margin: 20px;
+
+        }
     }
     #zap{
         width: 200px;

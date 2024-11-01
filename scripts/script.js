@@ -13,6 +13,21 @@ $(document).ready(function(){
       
     });
   });
+$(document).ready(function(){
+    $(".plan").slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      speed: 2000,
+      dots: true,
+      arrows: true,
+      prevArrow: $(".carousel-nav-left"),
+      nextArrow: $(".carousel-nav-right"),
+      
+    });
+  });
 function redirectToWhatsApp() {
     const cep = document.getElementById('cep').value.trim();
 
