@@ -1,12 +1,12 @@
 $(document).ready(function(){
     $(".carousel").slick({
       infinite: true,
-      autoplay: false,
+      autoplay: true,
       autoplaySpeed: 2000,
-      slidesToShow: 3.5,
+      slidesToShow: 3.2,
       slidesToScroll: 1,
       speed: 2000,
-      dots: false,
+      dots: true,
       arrows: true,
       prevArrow: $(".carousel-nav-left"),
       nextArrow: $(".carousel-nav-right"),
