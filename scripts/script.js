@@ -32,7 +32,7 @@ function redirectToWhatsApp() {
     const cep = document.getElementById('cep').value.trim();
 
     // Validação para checar se o campo está vazio ou se o CEP é inválido
-    const cepPattern = /^[0-9]{8}$/; // Regex para validar 8 dígitos numéricos
+    const cepPattern = /^[0-9]{5}-?[0-9]{3}$/; // Regex para validar 8 dígitos numéricos
 
     if (!cep) {
         alert("Por favor, insira o seu CEP.");
