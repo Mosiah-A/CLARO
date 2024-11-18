@@ -48,3 +48,41 @@ function redirectToWhatsApp() {
     window.open(whatsappLink, '_blank'); // Abre em uma nova aba
     return false; // Impede o envio convencional do formulário
 }
+/// Intervalo fixo de tempo (em milissegundos) - Exemplo: 24 horas
+const intervaloTempo = 24 * 60 * 60 * 1000; // 1 dia em milissegundos
+
+// Pega a hora atual e calcula o momento de término do intervalo
+let tempoInicio = new Date().getTime(); // Marca a hora do carregamento da página
+let tempoFinal = tempoInicio + intervaloTempo; // Adiciona o intervalo fixo
+
+// Função para atualizar o contador
+function atualizarContador() {
+  const agora = new Date().getTime();
+  const diferenca = tempoFinal - agora;
+
+  // Calcula dias, horas, minutos e segundos
+  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+  // Atualiza o HTML
+  document.getElementById("dias").innerText = dias < 10 ? "0" + dias : dias;
+  document.getElementById("horas").innerText = horas < 10 ? "0" + horas : horas;
+  document.getElementById("minutos").innerText = minutos < 10 ? "0" + minutos : minutos;
+  document.getElementById("segundos").innerText = segundos < 10 ? "0" + segundos : segundos;
+
+  // Quando o tempo acabar, reinicie o contador
+  if (diferenca < 0) {
+    tempoInicio = new Date().getTime(); // Atualiza o tempo de início
+    tempoFinal = tempoInicio + intervaloTempo; // Calcula o novo tempo final
+  }
+}
+
+// Atualiza o contador a cada segundo
+setInterval(atualizarContador, 1000);
+
+
+// Atualiza o contador a cada segundo
+const intervalo = setInterval(atualizarContador, 1000);
+

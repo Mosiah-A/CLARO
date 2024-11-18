@@ -43,9 +43,9 @@ header{
 }
 #hero{
 
-    background: linear-gradient(to bottom, #D52B1E, #420202);
+    background: linear-gradient(90deg, #FF0000, #B22222);
 
-    height: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +58,7 @@ header{
         display: flex;
         flex-direction: column;
         margin: 20px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -68,10 +68,24 @@ header{
             margin-bottom: 0;
         }
     }
-    .CTA{
+    & .CTA{
         width: auto;
         padding: 15px 40px ;
     }
+    & #contador {
+        padding: 20px;
+        background: linear-gradient(90deg, #FF0000, #FF6600);
+        color: white;
+        border-radius: 10px;
+        width: fit-content;
+        margin: 20px auto;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+      
+    &  #contador span {
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;
+      }
 }
 #precobox{
     font-size: 15px;
