@@ -21,6 +21,11 @@ header{
         width: 200px;
     }
 }
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
 .CTA{
     background-color: var(--amarelo);
     display: flex;
@@ -138,7 +143,6 @@ input:focus{
 #about{
     width: 70%;
     margin: auto;
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
