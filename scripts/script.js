@@ -49,11 +49,11 @@ function redirectToWhatsApp() {
     return false; // Impede o envio convencional do formulário
 }
 /// Intervalo fixo de tempo (em milissegundos) - Exemplo: 24 horas
-const intervaloTempo = 24 * 60 * 60 * 1000; // 1 dia em milissegundos
+const intervaloTempo = 18 * 60 * 60 * 1000; // 1 dia em milissegundos
 
 // Pega a hora atual e calcula o momento de término do intervalo
 let tempoInicio = new Date().getTime(); // Marca a hora do carregamento da página
-let tempoFinal = tempoInicio + intervaloTempo; // Adiciona o intervalo fixo
+let tempoFinal = tempoInicio + intervaloTempo - 20; // Adiciona o intervalo fixo
 
 // Função para atualizar o contador
 function atualizarContador() {

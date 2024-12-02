@@ -46,6 +46,9 @@ h1{
     cursor: pointer;
     font-size: 15px;
 }
+#subtitulo{
+    text-align: center;
+}
 #hero{
 
     background: linear-gradient(90deg, #FF0000, #B22222);
